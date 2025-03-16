@@ -55,6 +55,10 @@ impl Lexer {
                     } else if let Some('>') = self.proximo_char() {
                         self.avancar();
                         return Some(Token::Diferente);
+                    
+                    } else if let Some('-') = self.proximo_char() {
+                        self.avancar();
+                        return Some(Token::Atribuicao)
                     }
                     return Some(Token::Menor);
                 }
@@ -104,6 +108,7 @@ impl Lexer {
                 break;
             }
         }
+        
 
         match ident.as_str() {
             "SHOW" => Token::Show,
@@ -113,8 +118,9 @@ impl Lexer {
             "SOLO" => Token::Solo,
             "RITMO" => Token::Ritmo,
             "FIM_RITMO" => Token::FimRitmo,
-            "REFRÃO" => Token::Refrão,
-            "FIM_REFRÃO" => Token::FimRefrão,
+            "REFRAO" => Token::Refrao,
+            "ATE"   => Token::Ate,
+            "FIM_REFRAO" => Token::FimRefrao,
             "AFINAR" => Token::Afinar,
             "TOCAR" => Token::Tocar,
             "ENCERRAR" => Token::Encerrar,

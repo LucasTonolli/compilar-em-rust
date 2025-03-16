@@ -9,8 +9,9 @@ pub enum Token {
     Solo,         // SOLO
     Ritmo,        // RITMO
     FimRitmo,     // FIM_RITMO
-    Refrão,       // REFRÃO
-    FimRefrão,    // FIM_REFRÃO
+    Refrao,       // REFRÃO
+    Ate,          // ATE
+    FimRefrao,    // FIM_REFRÃO
     Afinar,       // AFINAR
     Tocar,        // TOCAR
 
