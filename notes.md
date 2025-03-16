@@ -1,7 +1,7 @@
 ##Tarefas
 
 - [✔️] Analisador léico (Acho)
-- [] Analisador sintático
+- [✔️] Analisador sintático
 
 # 📌 TODO: Implementação do Analisador Sintático 🎵
 
