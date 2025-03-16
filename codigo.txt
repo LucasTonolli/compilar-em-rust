@@ -1,0 +1,9 @@
+SHOW
+  ACORDES x,y
+  x <- (10 * 2);
+  
+  REFRAO x <- 10 + 2 ATE x >= 48
+    TOCAR(x);
+  FIM_REFRAO;
+  
+ENCERRAR

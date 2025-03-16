@@ -1,4 +1,3 @@
-// src/lexical.rs
 use crate::grammar::Token; // Importa os tokens da gramática
 
 pub struct Lexer {
@@ -29,7 +28,7 @@ impl Lexer {
     pub fn proximo_token(&mut self) -> Option<Token> {
         while let Some(ch) = self.proximo_char() {
             match ch {
-                ' ' | '\n' | '\t' => self.avancar(), // Ignora espaços em branco
+                ' ' | '\n' | '\t' | '\r' => self.avancar(), // Ignora espaços em branco
                 '(' => { self.avancar(); return Some(Token::ParentesesEsq); }
                 ')' => { self.avancar(); return Some(Token::ParentesesDir); }
                 ',' => { self.avancar(); return Some(Token::Virgula); }
@@ -76,7 +75,7 @@ impl Lexer {
                     return Some(self.identificador());
                 }
                 _ => {
-                    return Some(self.erro_lexico(ch)); // Ignora caracteres desconhecidos
+                    return Some(self.erro_lexico(ch)); 
                 }
             }
         }
