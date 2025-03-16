@@ -28,7 +28,6 @@ pub enum Token {
     Multiplicacao,// *
     Divisao,      // /
     Modulo,       // %
-    Potencia,     // **
 
     // Outros
     Numero(f64),  // Números
@@ -38,6 +37,4 @@ pub enum Token {
     ParentesesDir, // )
     Virgula,       // ,
     PontoVirgula,  // ;
-    FimArquivo,          // Fim do arquivo
-    Nulo,                 // Nulo
 }
